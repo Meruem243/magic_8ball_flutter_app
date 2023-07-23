@@ -23,7 +23,25 @@ class BallPage extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Container(),
+      body: const Ball(),
+    );
+  }
+}
+
+class Ball extends StatefulWidget {
+  const Ball({super.key});
+
+  @override
+  State<Ball> createState() => _BallState();
+}
+
+class _BallState extends State<Ball> {
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: Image(
+        image: AssetImage('images/ball1.png'),
+      ),
     );
   }
 }
